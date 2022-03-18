@@ -1,26 +1,27 @@
 //Task 3
 class Worker {
     // 1
+    #experience;
     constructor(fullName, dayRate, workingDays) {
         this.fullname = fullName;
         this._dayRate = dayRate;
         this._workingDays = workingDays;
-        this.experience = 1.2;
+        this.#experience = 1.2;
     }
     showSalary() {
         return this._dayRate * this._workingDays
     }
     //2
     showSalaryWithExperience() {
-        return this.showSalary() * this.experience
+        return this.showSalary() * this.#experience
     }
 
     get showExp() {
-        return this.experience;
+        return this.#experience;
     }
 
     set setExp(value) {
-        return this.experience = value;
+        return this.#experience = value;
     }
 }
 
